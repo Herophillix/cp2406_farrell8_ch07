@@ -17,16 +17,16 @@ public class DebugSeven2
       Scanner in = new Scanner(System.in);
       System.out.print("Enter a series of integers separated by spaces >> ");
       str = in.nextLine();
-      length = length();
+      length = str.length();
       for(x = 0; x <= length; ++x)
       {
-         if(str.charAt(x) == " ")
+         if(str.charAt(x) == ' ')
          {
              partStr = str.substring(x, lastSpace + 1);     
              num = Integer.parseInt(partStr);
              System.out.println("                " + num);
              sum = num;
-             lastSpace == x;
+             lastSpace = x;
           } 
       }
       partStr = str.substring(lastSpace + 1, length);
